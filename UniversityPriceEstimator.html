@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Price Estemator</title>
+
+    <script type="text/javascript">
+        function calculatingCost()
+        {
+            var annualCost = parseInt(document.getElementById("number").value);
+            var inflation = 0.05;
+            var total = 
+                annualCost+ 
+                annualCost+ 
+                inflation * annualCost+
+                annualCost+
+                inflation * 2 * annualCost +
+                annualCost+
+                inflation * 3 * annualCost; 
+
+            alert(total)
+            console.log(total)
+        }
+
+    </script>
+</head>
+    <body>
+        <h1>Enter the Tuition of your school of choice.</h1>
+        <form>
+            <input type="text" id="number" name="annualCost" placeholder="Tuition">
+            <input type="button" value="Enter" onclick="calculatingCost()"/>  
+            <!--<button onclick="calculatingCost()" id="btn">Enter</button>-->
+        </form>
+    </body>
+</html>
